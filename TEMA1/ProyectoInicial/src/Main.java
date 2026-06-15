@@ -7,6 +7,6 @@ public class Main {
         print y \n detrás de cualquiera de las palabras */
     }
 
-    //TODO clase del 02/10/2025 (para ver esto VIEW - TOOL WINDOWS - TODO
+    //TODO clase del 02/10/2025 (para ver esto VIEW - TOOL WINDOWS - TODO)
 
 }
