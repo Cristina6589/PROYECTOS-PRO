@@ -1,6 +1,6 @@
 public class Main {
     // Ejercicios Notion PRO-ThePower -- Ejercicios estructuras básicas
-    
+
     public static void main(String[] args) {
         //Ejercicio 1: Definir y mostrar variables
         String nombre = "Cristina";
