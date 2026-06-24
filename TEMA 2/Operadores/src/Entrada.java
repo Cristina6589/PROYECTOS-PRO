@@ -7,6 +7,5 @@ public class Entrada {
         operadoresVariable.operadoresLogicos();
         operadoresVariable.evaluarCandidato();
 
-
     }
 }
