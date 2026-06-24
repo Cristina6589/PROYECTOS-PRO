@@ -39,6 +39,41 @@ public class Operadores {
         System.out.println("El resultado de la concatenación es: "+operandoUno+operandoDos);
         System.out.println("El resultado de la suma es: "+(operandoUno+operandoDos));
 
+
+    }
+
+    public void operadoresAsignacion(){
+        int operandoUno = 6;
+        operandoUno += 6; //operandoUno = operandoUno + 6; // 12
+        /*A lo que ya tengo (operandoUno) le sumo 6 poniendo +=, así pico menos código
+        se puede hacer con cualquiera de los operadores aritméticos (suma, resta, multiplicación...)*/
+        operandoUno -= 3; // 9
+        operandoUno *= 2; // 18
+        operandoUno /= 2; // 9
+        operandoUno %= 3; // 0
+
+
+    }
+
+    public void operadoresRelacionales(){
+        int numeroUno = 4;
+        int numeroDos = 7;
+
+        boolean resultado = numeroUno > numeroDos; //false, uno más grande que dos?
+        System.out.println("El resultado de > es: "+resultado);
+        resultado = numeroUno >= numeroDos; //false, uno más grande o igual que dos?
+        System.out.println("El resultado de >= es: "+resultado);
+        resultado = numeroUno < numeroDos; //true, uno más pequeño que dos?
+        System.out.println("El resultado de < es: "+resultado);
+        resultado = numeroUno <= numeroDos;//true, uno más pequeño o igual que dos?
+        System.out.println("El resultado de <= es: "+resultado);
+        resultado = numeroUno == numeroDos;//false, son iguales?
+        System.out.println("El resultado de == es: "+resultado);
+        resultado = numeroUno != numeroDos;//true, es diferente?
+        System.out.println("El resultado de != es: "+resultado);
+    }
+
+    public void operadoresLogicos(){
         
     }
 
