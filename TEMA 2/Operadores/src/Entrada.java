@@ -5,6 +5,7 @@ public class Entrada {
         operadoresVariable.operadoresAsignacion();
         operadoresVariable.operadoresRelacionales();
         operadoresVariable.operadoresLogicos();
+        operadoresVariable.evaluarCandidato();
 
 
     }

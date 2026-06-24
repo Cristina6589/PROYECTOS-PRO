@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Operadores {
     public void operadoresAritmeticos(){
         System.out.println("Explicación de los operadores aritméticos");
@@ -74,7 +76,75 @@ public class Operadores {
     }
 
     public void operadoresLogicos(){
-        
+        /*Son AND OR NOT (los más comunes, hay más) y da como resultado
+        un booleano teniendo en cuenta varias comparaciones*/
+
+        int numeroUno = 4;
+        int numeroDos = 10;
+        int numeroTres = 17;
+
+        boolean resultadoLogicoAND = numeroUno>1 && numeroDos<11 && numeroDos!=numeroTres && numeroTres%2!=0;
+                                  // true && true && true && true -> true
+        /*AND -> el resultado de una comparacion compuesta por 2 o mas condiciones sera true si todas las comparaciones son true. &&
+		OP1		OP2		RESULTADO
+		true	true	true
+		true	false	false
+		false	true	false
+		false	false	false
+         */
+        System.out.println("El resultado lógico de AND es: "+resultadoLogicoAND);
+
+        boolean resultadoLogicoOR = numeroUno!=10 || numeroDos>10 || numeroTres<numeroDos || numeroDos%2!=0;
+                                    // true || false || false || false
+        /*OR -> el resultado de una compracion compuesta por 2 o mas condiciones sera true si una de las conciones es true. Solo sera false si todas son false ||
+		OP1		OP2		RESULTADO
+		true	true	true
+		true	false	true
+		false	true	true
+		false	false	false
+         */
+        System.out.println("El resultado lógico de OR es: "+resultadoLogicoOR);
+
+        boolean resultadoCombinado = numeroUno<10 || numeroTres>0 || numeroDos!=9 && numeroUno>0;
+                                     // true || true || true && true
+        System.out.println("El resultado de OR y AND es: "+resultadoCombinado);
+
+        numeroTres = 20;
+        numeroDos = 10;
+        numeroUno = 0;
+
+        boolean resultadoTotal = numeroUno>=0 && numeroDos<20&&false; //false porque hay un false
+        boolean resultadoTotalInverso = !resultadoTotal; // Este sería el NOT, tu me das algo y yo te lo devuelvo negado
+        /*como lo niego con el inverso ! se convierte en true esto es muy útil
+        porque en alguna estructura if me permitirá entrar por otro sitio*/
+
+        System.out.println("El resultado total inverso es: "+resultadoTotalInverso);
     }
 
+    public void evaluarCandidato(){
+        //para no tener que poner yo las variables, creo una variable Scanner
+            Scanner lectorTeclado = new Scanner(System.in);
+            System.out.println("Dime tu nombre y apellido: ");
+            String nombreApellido = lectorTeclado.nextLine();
+            System.out.println("Dime tu edad: ");
+            int edad = lectorTeclado.nextInt();
+            System.out.println("¿Qué salario quieres cobrar? ");
+            int salario = lectorTeclado.nextInt();
+            System.out.println("¿Tienes experiencia laboral? ");
+            boolean experiencia = lectorTeclado.nextBoolean();
+
+            /*edad inferior a 35 y sueldo < 40000 y experiencia, este podría ser un programa
+            para un proceso de selección para una empresa*/
+
+        boolean resultadoEvaluacion = edad<=35 && salario<40000 && experiencia;
+        System.out.println("El resultado evaluacion es que el candidato es: "+resultadoEvaluacion);
+
+        /*Por seguridad, cualquier flujo de datos debe cerrarse con close,
+        en un Scanner da un poco igual, pero hay otro flujos de datos que si puede ser peligroso
+        si no lo cierras el proceso no se completa. Por ejemplo, si estoy escribiendo en
+        un fichero como flujo de datos y no lo cierro, no se guardarán los datos que he escrito*/
+
+        lectorTeclado.close();
+
+        }
 }
