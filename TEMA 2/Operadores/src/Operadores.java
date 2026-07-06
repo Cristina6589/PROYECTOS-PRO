@@ -147,4 +147,22 @@ public class Operadores {
         lectorTeclado.close();
 
         }
+        public void cambiosTipo(){
+            int letraASCII = 75;
+            System.out.println((char) letraASCII);
+            char letra = 'w';
+            System.out.println((int) letra);
+            String palabra = "7";
+            System.out.println(Integer.parseInt(palabra)+10);
+            String palabra2 = "si";
+            System.out.println(Boolean.parseBoolean(palabra2));
+            /*El cambio a boolean nunca va a fallar, cualqier cosa que pongas,
+            siempre que detecte que no puede hacer cambios, devolverá false*/
+            int numero = 123;
+            System.out.println(String.valueOf(numero)+1);
+            boolean cierto = true;
+            System.out.println(String.valueOf(cierto)+"asd");
+            char letra1 = 'A';
+            System.out.println(String.valueOf(letra1)+123);
+        }
 }
